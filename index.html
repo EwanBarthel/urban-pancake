@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your 3D Printing Company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #0078D4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #005BB5;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #004494;
+        }
+        section {
+            padding: 20px;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: #f4f4f4;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .portfolio img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            width: 100%;
+            max-width: 400px;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 1rem;
+        }
+        .contact-form {
+            text-align: center;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .service-card {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 30%;
+            min-width: 250px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Your 3D Printing Company</h1>
+    <p>Innovative Solutions for All Your Printing Needs</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero">
+    <h1>Welcome to Our 3D Printing World!</h1>
+    <p>We specialize in custom, high-quality 3D printing solutions for all industries.</p>
+</section>
+
+<section id="portfolio">
+    <h2>Our Portfolio</h2>
+    <div class="portfolio">
+        <img src="example1.jpg" alt="3D Printed Object 1">
+        <img src="example2.jpg" alt="3D Printed Object 2">
+        <img src="example3.jpg" alt="3D Printed Object 3">
+    </div>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-card">
+            <h3>Prototyping</h3>
+            <p>Fast and accurate 3D prototypes for your designs.</p>
+        </div>
+        <div class="service-card">
+            <h3>Custom Printing</h3>
+            <p>Tailored 3D prints to meet unique specifications.</p>
+        </div>
+        <div class="service-card">
+            <h3>Design Assistance</h3>
+            <p>Professional support to turn your ideas into reality.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Your 3D Printing Company. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
