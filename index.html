@@ -3,97 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional 3D printing services for prototyping, custom designs, and more.">
+    <meta name="description" content="Revolutionary 3D printing services for custom designs, prototyping, and more.">
     <title>3D Printing Services</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f4f7fa;
+            background-color: #f9f9f9;
             color: #333;
+            overflow-x: hidden;
         }
+
         h1, h2, h3 {
-            color: #004d92;
+            color: #0078d4;
         }
 
         /* Header */
         header {
             background: linear-gradient(135deg, #0078d4, #004d92);
             color: white;
-            padding: 50px 20px;
+            padding: 80px 20px;
             text-align: center;
+            position: relative;
         }
         header h1 {
-            font-size: 3rem;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
         }
         header p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
-
+        
         /* Navigation */
         nav {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
-            justify-content: center;
-            background-color: #333;
+            justify-content: space-around;
+            width: 60%;
+            z-index: 10;
         }
         nav a {
             color: white;
             text-decoration: none;
             padding: 15px 25px;
             text-transform: uppercase;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         nav a:hover {
-            background-color: #0078d4;
+            background-color: #005bb5;
+            transform: scale(1.1);
         }
 
-        /* Hero Section */
+        /* Hero Section with Parallax */
         .hero {
-            background-image: url('https://www.example.com/3d-printing.jpg'); /* Replace with your image */
-            background-size: cover;
-            background-position: center;
-            padding: 120px 20px;
+            background: url('https://via.placeholder.com/1500x800/0078d4/ffffff?text=3D+Printing') no-repeat center center/cover;
+            padding: 150px 20px;
             color: white;
             text-align: center;
+            background-attachment: fixed;
+            position: relative;
         }
         .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-out;
         }
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             max-width: 700px;
             margin: 0 auto;
+            animation: fadeIn 2s ease-out;
         }
 
-        /* Services Section */
+        /* Service Section */
         .services {
-            padding: 60px 20px;
+            padding: 100px 20px;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             flex-wrap: wrap;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
         }
         .service-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             width: 30%;
-            margin: 15px;
-            padding: 25px;
-            text-align: center;
+            padding: 40px 20px;
+            margin: 20px 0;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
         }
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
         .service-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
         .service-card p {
             font-size: 1.1rem;
@@ -103,50 +123,56 @@
         /* Portfolio Section */
         .portfolio {
             background-color: #f1f1f1;
-            padding: 60px 20px;
+            padding: 100px 20px;
             text-align: center;
         }
         .portfolio h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 30px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+        .portfolio-images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
         .portfolio img {
             width: 100%;
-            max-width: 300px;
+            max-width: 320px;
             margin: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .portfolio img:hover {
             transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
 
-        /* Contact Form */
+        /* Contact Form Section */
         .contact {
-            padding: 60px 20px;
+            padding: 80px 20px;
             background-color: #333;
             color: white;
             text-align: center;
         }
         .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            margin-bottom: 40px;
         }
         .contact-form input, .contact-form textarea, .contact-form button {
             width: 100%;
             max-width: 600px;
-            margin: 10px 0;
-            padding: 12px;
+            margin: 15px 0;
+            padding: 15px;
             font-size: 1.1rem;
-            border-radius: 5px;
+            border-radius: 8px;
             border: 1px solid #ddd;
         }
         .contact-form button {
             background-color: #0078d4;
             color: white;
-            cursor: pointer;
             font-weight: bold;
+            cursor: pointer;
             transition: background-color 0.3s ease;
         }
         .contact-form button:hover {
@@ -158,7 +184,28 @@
             background-color: #222;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -166,58 +213,53 @@
 
 <header>
     <h1>3D Printing Solutions</h1>
-    <p>Bringing your ideas to life with cutting-edge 3D printing technology</p>
+    <p>Your ideas, brought to life with cutting-edge 3D printing technology.</p>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-</nav>
-
 <section id="home" class="hero">
-    <h2>Revolutionizing Prototyping and Design</h2>
-    <p>We provide high-quality, custom 3D printing services for your projects, from concept to completion.</p>
+    <h2>Innovative 3D Printing Services</h2>
+    <p>Transforming prototypes, models, and custom designs into reality with precision and quality.</p>
 </section>
 
 <section id="services" class="services">
     <div class="service-card">
         <h3>Prototyping</h3>
-        <p>Quick and cost-effective prototyping for your product ideas, helping you refine your designs before production.</p>
+        <p>Fast and affordable prototyping services to refine your ideas before manufacturing.</p>
     </div>
     <div class="service-card">
         <h3>Custom Printing</h3>
-        <p>Bring your custom designs to life with precision and quality. We handle everything from CAD to final product.</p>
+        <p>Bring your unique designs to life with our high-quality custom printing services.</p>
     </div>
     <div class="service-card">
-        <h3>Design Support</h3>
-        <p>Need help designing? Our experts can assist in turning your ideas into printable 3D models ready for production.</p>
+        <h3>Design Assistance</h3>
+        <p>Need help designing? Our experts will collaborate with you to perfect your 3D models.</p>
     </div>
 </section>
 
 <section id="portfolio" class="portfolio">
     <h2>Our Work</h2>
     <div class="portfolio-images">
-        <img src="https://via.placeholder.com/300" alt="3D print example 1">
-        <img src="https://via.placeholder.com/300" alt="3D print example 2">
-        <img src="https://via.placeholder.com/300" alt="3D print example 3">
+        <img src="https://via.placeholder.com/320" alt="3D print example 1">
+        <img src="https://via.placeholder.com/320" alt="3D print example 2">
+        <img src="https://via.placeholder.com/320" alt="3D print example 3">
     </div>
 </section>
 
 <section id="contact" class="contact">
-    <h2>Get In Touch</h2>
+    <h2>Contact Us</h2>
     <div class="contact-form">
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <textarea placeholder="Your Message" rows="6" required></textarea>
         <button type="submit">Send Message</button>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2024 3D Printing Solutions. All Rights Reserved.</p>
-</footer>
-
-</body>
-</html>
+    <p>&
